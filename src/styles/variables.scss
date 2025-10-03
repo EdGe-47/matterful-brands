@@ -1,0 +1,28 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-dark: #000000;
+  --color-gray: #888888;
+  --color-gray-alt: #CCCCCC;
+  --color-dark-transparent: #00000033;
+
+  --color-bg: #F4F4F4;
+
+  --border: var(--border-width) solid var(--color-dark);
+
+  --border-width: 1px;
+
+  --border-radius-8: 8px;
+
+  --font-family-base: 'Montserrat', sans-serif;
+  --font-family-second: 'PlayfairDisplay', sans-serif;
+
+  --container-width: 1200px;
+  --small-container-width: 800px;
+  --large-container-width: 1920px;
+
+  --container-padding-x: 15px;
+
+  --section-padding-y: #{fluid(60, 20)};
+
+  --transition-duration: 0.2s;
+}

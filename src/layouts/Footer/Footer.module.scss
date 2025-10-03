@@ -1,0 +1,33 @@
+.footer {
+  padding-top: 60px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.footerLogo {
+  width: 240px;
+  height: 48px;
+}
+
+.body {
+  display: flex;
+}
+
+.locationWrapper {
+  padding-bottom: 60px;
+  display: grid;
+  row-gap: 20px;
+}
+
+.copyright {
+  padding: 15px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}

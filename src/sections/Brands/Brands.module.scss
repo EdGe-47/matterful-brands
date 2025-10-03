@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 15px;
+}
+
+.innerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-basis: auto;
+  padding: 15px;
+}
+
+.innerBottom {
+  composes: innerTop;
+  align-items: start;
+}
+
+.image {
+  max-width: 100%;
+  object-fit: contain;
+}

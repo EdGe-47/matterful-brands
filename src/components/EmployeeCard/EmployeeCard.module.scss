@@ -1,0 +1,28 @@
+.employeeCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
+  max-width: 100%;
+  padding-inline: 67px;
+  text-align: center;
+  line-height: 1.57;
+
+  @include mobile {
+    padding: 34px;
+  }
+}
+
+.header {
+  min-width: 0;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.employeeName {
+  font-size: 20px;
+  line-height: 1.28;
+}

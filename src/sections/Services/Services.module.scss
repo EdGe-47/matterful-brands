@@ -1,0 +1,28 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-bottom: 30px;
+  }
+}
+
+.item {
+  @include flex-center;
+
+  flex-direction: column;
+  row-gap: 9px;
+}
+
+.title {
+  font-family: var(--font-family-second);
+  line-height: 1.25;
+  font-size: 24px;
+  text-align: center;
+}

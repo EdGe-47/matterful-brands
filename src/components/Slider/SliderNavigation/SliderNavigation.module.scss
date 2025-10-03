@@ -1,0 +1,50 @@
+.sliderNavigation {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  width: 100%;
+  translate: 0 -50%;
+}
+
+.button {
+  @include square(27);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px;
+  border: none;
+  color: var(--color-gray-alt);
+  background-color: inherit;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    scale: 1.3;
+    color: var(--color-dark);
+    transition-duration: var(--transition-duration)
+  }
+
+  @include mobile {
+    padding: 10px;
+  }
+}
+
+.prevButton {
+  composes: button;
+
+  &Image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nextButton {
+  composes: button;
+
+  &Image {
+    rotate: 180deg;
+    width: 100%;
+    height: 100%;
+  }
+}

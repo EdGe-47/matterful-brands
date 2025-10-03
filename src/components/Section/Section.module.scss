@@ -1,0 +1,30 @@
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  row-gap: 11px;
+  max-width: 800px;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-family-second);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.black {
+  background-color: var(--color-dark);
+}

@@ -1,0 +1,121 @@
+.image-card {
+
+}
+
+.empty-wrapper-card {
+  width: 470px;
+  height: 584px;
+}
+
+.only-image {
+  width: 470px;
+  height: 608px;
+  border-radius: var(--border-radius-8);
+}
+
+.large-image {
+  width: 570px;
+  height: 652px;
+  border-radius: var(--border-radius-8);
+}
+
+.bna-card {
+  --position: 50%;
+
+  position: relative;
+  overflow: hidden;
+  width: 470px;
+  height: 608px;
+  border-radius: var(--border-radius-8);
+  touch-action: none;
+  user-select: none;
+  z-index: 0;
+
+  &__images-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  &__before-image {
+    clip-path: polygon(0 0, var(--position) 0, var(--position) 100%, 0 100%);
+    z-index: 10;
+  }
+
+  &__after-image {
+    z-index: 0;
+  }
+
+  &__handle {
+    @include abs-x;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  &__button {
+    position: relative;
+    left: var(--position);
+    top: 50%;
+    translate: -50% -50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-dark-transparent);
+    z-index: 100;
+    opacity: 1;
+    cursor: grab;
+    transition-property: scale;
+    transition-duration: var(--transition-duration);
+
+    outline: 2px solid var(--color-white);
+    outline-offset: -5px;
+
+    &.is-dragging {
+      cursor: grabbing;
+    }
+
+    @include hover {
+      scale: 1.2;
+      transition-duration: var(--transition-duration);
+    }
+
+    &::before {
+      @include abs-y;
+
+      content: '';
+      position: absolute;
+      left: 17%;
+      width: 8px;
+      height: 14px;
+      background: url("/src/assets/icons/arrow.svg") center/contain no-repeat;
+    }
+
+    &::after {
+      @include abs-y;
+
+      content: '';
+      position: absolute;
+      top: 51%;
+      left: 71.5%;
+      width: 8px;
+      height: 14px;
+      background: url("/src/assets/icons/arrow.svg") center/contain no-repeat;
+      rotate: 180deg;
+    }
+  }
+}
+

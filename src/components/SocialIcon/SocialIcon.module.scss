@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  padding-inline: 15px;
+  column-gap: 15px;
+  width: 300px;
+  height: 106px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.title {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.image {
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    transition-duration: var(--transition-duration);
+  }
+}

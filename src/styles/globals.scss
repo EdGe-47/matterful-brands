@@ -1,0 +1,81 @@
+@use '@/styles/helpers' as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: var(--font-family-base);
+  color: var(--color-black);
+  background-color: var(--color-bg);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: var(--font-family-second);
+  color: var(--color-black);
+  margin: 0;
+}
+
+h1, .h1 {
+  @include fluid-text(40, 28);
+
+  font-weight: 700;
+}
+
+h2, .h2 {
+  @include fluid-text(36, 24);
+
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+h3, .h3 {
+  @include fluid-text(30, 20);
+
+  line-height: 1.17;
+  font-weight: 700;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-gray-alt);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
+
+//header,
+//main > *:not(:last-child),
+//footer {
+//  display: none;
+//}
